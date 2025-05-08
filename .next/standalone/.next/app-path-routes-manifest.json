@@ -1,0 +1,21 @@
+{
+  "/_not-found/page": "/_not-found",
+  "/favicon.ico/route": "/favicon.ico",
+  "/login/page": "/login",
+  "/page": "/",
+  "/player/page": "/player",
+  "/organiser/page": "/organiser",
+  "/scoreboard/[roundId]/page": "/scoreboard/[roundId]",
+  "/admin-portal/organisation/[id]/page": "/admin-portal/organisation/[id]",
+  "/admin-portal/games/page": "/admin-portal/games",
+  "/admin-portal/phishing/page": "/admin-portal/phishing",
+  "/admin-portal/quizzes/[quizId]/page": "/admin-portal/quizzes/[quizId]",
+  "/admin-portal/quizzes/page": "/admin-portal/quizzes",
+  "/admin-portal/rounds/page": "/admin-portal/rounds",
+  "/admin-portal/page": "/admin-portal",
+  "/admin-portal/sessions/page": "/admin-portal/sessions",
+  "/admin-portal/settings/page": "/admin-portal/settings",
+  "/admin-portal/organisations/page": "/admin-portal/organisations",
+  "/pre/page": "/pre",
+  "/post/page": "/post"
+}

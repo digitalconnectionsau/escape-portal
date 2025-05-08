@@ -1,0 +1,158 @@
+{
+  "version": 3,
+  "pages404": true,
+  "caseSensitive": false,
+  "basePath": "",
+  "redirects": [
+    {
+      "source": "/:path+/",
+      "destination": "/:path+",
+      "internal": true,
+      "statusCode": 308,
+      "regex": "^(?:/((?:[^/]+?)(?:/(?:[^/]+?))*))/$"
+    }
+  ],
+  "headers": [],
+  "dynamicRoutes": [
+    {
+      "page": "/admin-portal/organisation/[id]",
+      "regex": "^/admin\\-portal/organisation/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPid": "nxtPid"
+      },
+      "namedRegex": "^/admin\\-portal/organisation/(?<nxtPid>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/admin-portal/quizzes/[quizId]",
+      "regex": "^/admin\\-portal/quizzes/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPquizId": "nxtPquizId"
+      },
+      "namedRegex": "^/admin\\-portal/quizzes/(?<nxtPquizId>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/scoreboard/[roundId]",
+      "regex": "^/scoreboard/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtProundId": "nxtProundId"
+      },
+      "namedRegex": "^/scoreboard/(?<nxtProundId>[^/]+?)(?:/)?$"
+    }
+  ],
+  "staticRoutes": [
+    {
+      "page": "/",
+      "regex": "^/(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/(?:/)?$"
+    },
+    {
+      "page": "/_not-found",
+      "regex": "^/_not\\-found(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/_not\\-found(?:/)?$"
+    },
+    {
+      "page": "/admin-portal",
+      "regex": "^/admin\\-portal(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/admin\\-portal(?:/)?$"
+    },
+    {
+      "page": "/admin-portal/games",
+      "regex": "^/admin\\-portal/games(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/admin\\-portal/games(?:/)?$"
+    },
+    {
+      "page": "/admin-portal/organisations",
+      "regex": "^/admin\\-portal/organisations(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/admin\\-portal/organisations(?:/)?$"
+    },
+    {
+      "page": "/admin-portal/phishing",
+      "regex": "^/admin\\-portal/phishing(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/admin\\-portal/phishing(?:/)?$"
+    },
+    {
+      "page": "/admin-portal/quizzes",
+      "regex": "^/admin\\-portal/quizzes(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/admin\\-portal/quizzes(?:/)?$"
+    },
+    {
+      "page": "/admin-portal/rounds",
+      "regex": "^/admin\\-portal/rounds(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/admin\\-portal/rounds(?:/)?$"
+    },
+    {
+      "page": "/admin-portal/sessions",
+      "regex": "^/admin\\-portal/sessions(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/admin\\-portal/sessions(?:/)?$"
+    },
+    {
+      "page": "/admin-portal/settings",
+      "regex": "^/admin\\-portal/settings(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/admin\\-portal/settings(?:/)?$"
+    },
+    {
+      "page": "/favicon.ico",
+      "regex": "^/favicon\\.ico(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/favicon\\.ico(?:/)?$"
+    },
+    {
+      "page": "/login",
+      "regex": "^/login(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/login(?:/)?$"
+    },
+    {
+      "page": "/organiser",
+      "regex": "^/organiser(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/organiser(?:/)?$"
+    },
+    {
+      "page": "/player",
+      "regex": "^/player(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/player(?:/)?$"
+    },
+    {
+      "page": "/post",
+      "regex": "^/post(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/post(?:/)?$"
+    },
+    {
+      "page": "/pre",
+      "regex": "^/pre(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/pre(?:/)?$"
+    }
+  ],
+  "dataRoutes": [],
+  "rsc": {
+    "header": "RSC",
+    "varyHeader": "RSC, Next-Router-State-Tree, Next-Router-Prefetch, Next-Router-Segment-Prefetch",
+    "prefetchHeader": "Next-Router-Prefetch",
+    "didPostponeHeader": "x-nextjs-postponed",
+    "contentTypeHeader": "text/x-component",
+    "suffix": ".rsc",
+    "prefetchSuffix": ".prefetch.rsc",
+    "prefetchSegmentHeader": "Next-Router-Segment-Prefetch",
+    "prefetchSegmentSuffix": ".segment.rsc",
+    "prefetchSegmentDirSuffix": ".segments"
+  },
+  "rewriteHeaders": {
+    "pathHeader": "x-nextjs-rewritten-path",
+    "queryHeader": "x-nextjs-rewritten-query"
+  },
+  "rewrites": []
+}
