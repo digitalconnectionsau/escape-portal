@@ -31,6 +31,24 @@
       "namedRegex": "^/admin\\-portal/quizzes/(?<nxtPquizId>[^/]+?)(?:/)?$"
     },
     {
+      "page": "/quiz/post/[sessionId]/[userId]",
+      "regex": "^/quiz/post/([^/]+?)/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPsessionId": "nxtPsessionId",
+        "nxtPuserId": "nxtPuserId"
+      },
+      "namedRegex": "^/quiz/post/(?<nxtPsessionId>[^/]+?)/(?<nxtPuserId>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/quiz/pre/[sessionId]/[userId]",
+      "regex": "^/quiz/pre/([^/]+?)/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPsessionId": "nxtPsessionId",
+        "nxtPuserId": "nxtPuserId"
+      },
+      "namedRegex": "^/quiz/pre/(?<nxtPsessionId>[^/]+?)/(?<nxtPuserId>[^/]+?)(?:/)?$"
+    },
+    {
       "page": "/scoreboard/[roundId]",
       "regex": "^/scoreboard/([^/]+?)(?:/)?$",
       "routeKeys": {
@@ -53,10 +71,10 @@
       "namedRegex": "^/_not\\-found(?:/)?$"
     },
     {
-      "page": "/admin-portal",
-      "regex": "^/admin\\-portal(?:/)?$",
+      "page": "/admin-portal/dashboard",
+      "regex": "^/admin\\-portal/dashboard(?:/)?$",
       "routeKeys": {},
-      "namedRegex": "^/admin\\-portal(?:/)?$"
+      "namedRegex": "^/admin\\-portal/dashboard(?:/)?$"
     },
     {
       "page": "/admin-portal/games",
@@ -101,6 +119,18 @@
       "namedRegex": "^/admin\\-portal/settings(?:/)?$"
     },
     {
+      "page": "/company-portal",
+      "regex": "^/company\\-portal(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/company\\-portal(?:/)?$"
+    },
+    {
+      "page": "/facilitator-portal",
+      "regex": "^/facilitator\\-portal(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/facilitator\\-portal(?:/)?$"
+    },
+    {
       "page": "/favicon.ico",
       "regex": "^/favicon\\.ico(?:/)?$",
       "routeKeys": {},
@@ -125,16 +155,10 @@
       "namedRegex": "^/player(?:/)?$"
     },
     {
-      "page": "/post",
-      "regex": "^/post(?:/)?$",
+      "page": "/player-portal",
+      "regex": "^/player\\-portal(?:/)?$",
       "routeKeys": {},
-      "namedRegex": "^/post(?:/)?$"
-    },
-    {
-      "page": "/pre",
-      "regex": "^/pre(?:/)?$",
-      "routeKeys": {},
-      "namedRegex": "^/pre(?:/)?$"
+      "namedRegex": "^/player\\-portal(?:/)?$"
     }
   ],
   "dataRoutes": [],

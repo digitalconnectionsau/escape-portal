@@ -1,7 +1,7 @@
 {
   "version": 4,
   "routes": {
-    "/": {
+    "/player-portal": {
       "experimentalBypassFor": [
         {
           "type": "header",
@@ -14,8 +14,8 @@
         }
       ],
       "initialRevalidateSeconds": false,
-      "srcRoute": "/",
-      "dataRoute": "/index.rsc",
+      "srcRoute": "/player-portal",
+      "dataRoute": "/player-portal.rsc",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -25,7 +25,7 @@
         "x-next-revalidate-tag-token"
       ]
     },
-    "/pre": {
+    "/player": {
       "experimentalBypassFor": [
         {
           "type": "header",
@@ -38,8 +38,8 @@
         }
       ],
       "initialRevalidateSeconds": false,
-      "srcRoute": "/pre",
-      "dataRoute": "/pre.rsc",
+      "srcRoute": "/player",
+      "dataRoute": "/player.rsc",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -78,7 +78,7 @@
         "x-next-revalidate-tag-token"
       ]
     },
-    "/organiser": {
+    "/facilitator-portal": {
       "experimentalBypassFor": [
         {
           "type": "header",
@@ -91,56 +91,8 @@
         }
       ],
       "initialRevalidateSeconds": false,
-      "srcRoute": "/organiser",
-      "dataRoute": "/organiser.rsc",
-      "allowHeader": [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token"
-      ]
-    },
-    "/post": {
-      "experimentalBypassFor": [
-        {
-          "type": "header",
-          "key": "Next-Action"
-        },
-        {
-          "type": "header",
-          "key": "content-type",
-          "value": "multipart/form-data;.*"
-        }
-      ],
-      "initialRevalidateSeconds": false,
-      "srcRoute": "/post",
-      "dataRoute": "/post.rsc",
-      "allowHeader": [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token"
-      ]
-    },
-    "/admin-portal/organisations": {
-      "experimentalBypassFor": [
-        {
-          "type": "header",
-          "key": "Next-Action"
-        },
-        {
-          "type": "header",
-          "key": "content-type",
-          "value": "multipart/form-data;.*"
-        }
-      ],
-      "initialRevalidateSeconds": false,
-      "srcRoute": "/admin-portal/organisations",
-      "dataRoute": "/admin-portal/organisations.rsc",
+      "srcRoute": "/facilitator-portal",
+      "dataRoute": "/facilitator-portal.rsc",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -174,7 +126,7 @@
         "x-next-revalidate-tag-token"
       ]
     },
-    "/player": {
+    "/admin-portal/games": {
       "experimentalBypassFor": [
         {
           "type": "header",
@@ -187,8 +139,8 @@
         }
       ],
       "initialRevalidateSeconds": false,
-      "srcRoute": "/player",
-      "dataRoute": "/player.rsc",
+      "srcRoute": "/admin-portal/games",
+      "dataRoute": "/admin-portal/games.rsc",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -198,7 +150,7 @@
         "x-next-revalidate-tag-token"
       ]
     },
-    "/admin-portal/phishing": {
+    "/admin-portal/dashboard": {
       "experimentalBypassFor": [
         {
           "type": "header",
@@ -211,8 +163,8 @@
         }
       ],
       "initialRevalidateSeconds": false,
-      "srcRoute": "/admin-portal/phishing",
-      "dataRoute": "/admin-portal/phishing.rsc",
+      "srcRoute": "/admin-portal/dashboard",
+      "dataRoute": "/admin-portal/dashboard.rsc",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -222,7 +174,7 @@
         "x-next-revalidate-tag-token"
       ]
     },
-    "/admin-portal": {
+    "/organiser": {
       "experimentalBypassFor": [
         {
           "type": "header",
@@ -235,8 +187,32 @@
         }
       ],
       "initialRevalidateSeconds": false,
-      "srcRoute": "/admin-portal",
-      "dataRoute": "/admin-portal.rsc",
+      "srcRoute": "/organiser",
+      "dataRoute": "/organiser.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/admin-portal/organisations": {
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "Next-Action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/admin-portal/organisations",
+      "dataRoute": "/admin-portal/organisations.rsc",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -270,7 +246,7 @@
         "x-next-revalidate-tag-token"
       ]
     },
-    "/admin-portal/games": {
+    "/": {
       "experimentalBypassFor": [
         {
           "type": "header",
@@ -283,8 +259,8 @@
         }
       ],
       "initialRevalidateSeconds": false,
-      "srcRoute": "/admin-portal/games",
-      "dataRoute": "/admin-portal/games.rsc",
+      "srcRoute": "/",
+      "dataRoute": "/index.rsc",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -318,6 +294,30 @@
         "x-next-revalidate-tag-token"
       ]
     },
+    "/company-portal": {
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "Next-Action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/company-portal",
+      "dataRoute": "/company-portal.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
     "/admin-portal/settings": {
       "experimentalBypassFor": [
         {
@@ -333,6 +333,30 @@
       "initialRevalidateSeconds": false,
       "srcRoute": "/admin-portal/settings",
       "dataRoute": "/admin-portal/settings.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/admin-portal/phishing": {
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "Next-Action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/admin-portal/phishing",
+      "dataRoute": "/admin-portal/phishing.rsc",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -370,8 +394,8 @@
   "dynamicRoutes": {},
   "notFoundRoutes": [],
   "preview": {
-    "previewModeId": "2bc4b0a4877eb903c80c730f6349fe34",
-    "previewModeSigningKey": "c5adfaff656f1644321e794074e05a33434891b0661bc3ed8e2eb8371cc829aa",
-    "previewModeEncryptionKey": "9b94ff260d717c7cdae3d927f1e8d7301879a5e0866bc598379d66ebb4801531"
+    "previewModeId": "8a6f7ac7a85dbc91e5f79e0fa59813ef",
+    "previewModeSigningKey": "b13cf776f33a41886a0cf9f75ecb6099de9af57598129ad67c52f2c7690c3c1b",
+    "previewModeEncryptionKey": "2db96176801c8a2e724755ebc610006a3e24ef91eb4690bba1e893a665f55da0"
   }
 }

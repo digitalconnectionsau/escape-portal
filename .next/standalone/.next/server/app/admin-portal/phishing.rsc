@@ -1,23 +1,26 @@
 1:"$Sreact.fragment"
-2:I[7555,[],""]
-3:I[1295,[],""]
-4:I[9476,["992","static/chunks/bc9e92e6-3c21e0315c4f058d.js","118","static/chunks/05411bfb-625c955f12c8d4cd.js","645","static/chunks/645-878bfab84e9cb79d.js","874","static/chunks/874-b8426753d54e57a4.js","63","static/chunks/63-4f17513dcf552dc0.js","280","static/chunks/app/admin-portal/layout-f2eca72a121a9a99.js"],"default"]
-5:I[894,[],"ClientPageRoot"]
-6:I[2030,["708","static/chunks/app/admin-portal/phishing/page-0df9b2e4e2322a2b.js"],"default"]
-9:I[9665,[],"MetadataBoundary"]
-b:I[9665,[],"OutletBoundary"]
-e:I[4911,[],"AsyncMetadataOutlet"]
-10:I[9665,[],"ViewportBoundary"]
-12:I[6614,[],""]
-:HL["/_next/static/css/d0ba36566551f35b.css","style"]
-0:{"P":null,"b":"67Jj-aAPxVYiodmx89U9z","p":"","c":["","admin-portal","phishing"],"i":false,"f":[[["",{"children":["admin-portal",{"children":["phishing",{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/d0ba36566551f35b.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"en","children":["$","body",null,{"className":"bg-black text-white","children":["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L3",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}]}]]}],{"children":["admin-portal",["$","$1","c",{"children":[null,["$","div",null,{"className":"flex min-h-screen bg-black text-white","children":[["$","$L4",null,{}],["$","main",null,{"className":"flex-1 bg-white text-black p-8","children":["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L3",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]}]]}]]}],{"children":["phishing",["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L3",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":["__PAGE__",["$","$1","c",{"children":[["$","$L5",null,{"Component":"$6","searchParams":{},"params":{},"promises":["$@7","$@8"]}],["$","$L9",null,{"children":"$La"}],null,["$","$Lb",null,{"children":["$Lc","$Ld",["$","$Le",null,{"promise":"$@f"}]]}]]}],{},null,false]},null,false]},null,false]},null,false],["$","$1","h",{"children":[null,["$","$1","dJJfwpyfKpUivqqIUow51",{"children":[["$","$L10",null,{"children":"$L11"}],null]}],null]}],false]],"m":"$undefined","G":["$12","$undefined"],"s":false,"S":true}
-13:"$Sreact.suspense"
-14:I[4911,[],"AsyncMetadata"]
+2:I[368,["992","static/chunks/bc9e92e6-49dc68d6b121cf2f.js","118","static/chunks/05411bfb-c157f9496a5a5a3b.js","559","static/chunks/559-c35d11e4a8185ede.js","177","static/chunks/app/layout-fe8a40cc99bfcb4c.js"],"AuthProvider"]
+3:I[7555,[],""]
+4:I[1295,[],""]
+5:I[4970,[],"ClientSegmentRoot"]
+6:I[9812,["992","static/chunks/bc9e92e6-49dc68d6b121cf2f.js","118","static/chunks/05411bfb-c157f9496a5a5a3b.js","559","static/chunks/559-c35d11e4a8185ede.js","874","static/chunks/874-a8a210c5f4dbfd9d.js","766","static/chunks/766-c7153f01cf302040.js","280","static/chunks/app/admin-portal/layout-42dbe6b0d406ddf3.js"],"default"]
+8:I[894,[],"ClientPageRoot"]
+9:I[2030,["708","static/chunks/app/admin-portal/phishing/page-0df9b2e4e2322a2b.js"],"default"]
+c:I[9665,[],"MetadataBoundary"]
+e:I[9665,[],"OutletBoundary"]
+11:I[4911,[],"AsyncMetadataOutlet"]
+13:I[9665,[],"ViewportBoundary"]
+15:I[6614,[],""]
+:HL["/_next/static/css/ec5c12e8e3508b85.css","style"]
+0:{"P":null,"b":"mStsh-nqdy_xY-tAtTSCK","p":"","c":["","admin-portal","phishing"],"i":false,"f":[[["",{"children":["admin-portal",{"children":["phishing",{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/ec5c12e8e3508b85.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"en","children":["$","body",null,{"className":"bg-black text-white","children":["$","$L2",null,{"children":["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}]}]}]]}],{"children":["admin-portal",["$","$1","c",{"children":[null,["$","$L5",null,{"Component":"$6","slots":{"children":["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]},"params":{},"promise":"$@7"}]]}],{"children":["phishing",["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":["__PAGE__",["$","$1","c",{"children":[["$","$L8",null,{"Component":"$9","searchParams":{},"params":"$0:f:0:1:2:children:1:props:children:1:props:params","promises":["$@a","$@b"]}],["$","$Lc",null,{"children":"$Ld"}],null,["$","$Le",null,{"children":["$Lf","$L10",["$","$L11",null,{"promise":"$@12"}]]}]]}],{},null,false]},null,false]},null,false]},null,false],["$","$1","h",{"children":[null,["$","$1","SD3N_mjcFfkwyphFIPRxi",{"children":[["$","$L13",null,{"children":"$L14"}],null]}],null]}],false]],"m":"$undefined","G":["$15","$undefined"],"s":false,"S":true}
+16:"$Sreact.suspense"
+17:I[4911,[],"AsyncMetadata"]
 7:{}
-8:{}
-a:["$","$13",null,{"fallback":null,"children":["$","$L14",null,{"promise":"$@15"}]}]
-d:null
-11:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
-c:null
-15:{"metadata":[["$","title","0",{"children":"Escape Portal"}],["$","meta","1",{"name":"description","content":"Cyber escape game admin portal"}],["$","link","2",{"rel":"icon","href":"/favicon.ico","type":"image/x-icon","sizes":"16x16"}]],"error":null,"digest":"$undefined"}
-f:{"metadata":"$15:metadata","error":null,"digest":"$undefined"}
+a:{}
+b:{}
+d:["$","$16",null,{"fallback":null,"children":["$","$L17",null,{"promise":"$@18"}]}]
+10:null
+14:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+f:null
+18:{"metadata":[["$","title","0",{"children":"Escape Portal"}],["$","meta","1",{"name":"description","content":"Cyber escape game admin portal"}],["$","link","2",{"rel":"icon","href":"/favicon.ico","type":"image/x-icon","sizes":"16x16"}]],"error":null,"digest":"$undefined"}
+12:{"metadata":"$18:metadata","error":null,"digest":"$undefined"}
