@@ -4,5 +4,8 @@
     "frameworksBackend": {
       "region": "asia-east1"
     }
+  },
+  "functions": {
+    "source": "functions"
   }
 }

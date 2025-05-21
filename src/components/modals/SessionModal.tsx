@@ -84,7 +84,7 @@ export default function SessionModal({
           date: sessionDate,
           startTime,
           facilitatorName,
-          teamId: '', // To be updated after team creation
+          teamId: '', 
         });
         sessionId = sessionRef.id;
       } else {
@@ -104,12 +104,16 @@ export default function SessionModal({
           teamName,
         });
         teamId = teamRef.id;
-
-        // Update Session with new teamId
-        await updateDoc(doc(db, 'Sessions', sessionId), { teamId });
+      
+        // ✅ Update Session with teamId AND teamName
+        await updateDoc(doc(db, 'Sessions', sessionId), { teamId, teamName });
       } else {
         await updateDoc(doc(db, 'Teams', teamId), { teamName });
+      
+        // ✅ Also ensure teamName is synced on Session when team name changes
+        await updateDoc(doc(db, 'Sessions', sessionId), { teamName });
       }
+      
 
       // 3. Manage Team Members
       const existingMembersQuery = query(collection(db, 'TeamMembers'), where('teamId', '==', teamId));

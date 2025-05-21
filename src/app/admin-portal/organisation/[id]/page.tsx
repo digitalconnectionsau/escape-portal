@@ -11,7 +11,10 @@ import AddResults from 'components/modals/AddResults';
 import SessionModal from '@/components/modals/SessionModal';
 import AddRoundModal from 'components/modals/AddRoundModal';
 import RoundCard from 'components/RoundCards';
-import { Organisation, Round, Session } from '@/types/interfaces';
+import { Organisation, Round, Session, TeamMemberInput } from '@/types/interfaces';
+import TeamMembersModal from '@/components/modals/TeamMembersModal';
+
+
 
 export default function OrganisationDetailPage() {
   const { id } = useParams();
@@ -29,6 +32,12 @@ export default function OrganisationDetailPage() {
 
   const [showResultsModal, setShowResultsModal] = useState(false);
   const [resultsSessionId, setResultsSessionId] = useState<string | null>(null);
+
+  const [showTeamMembersModal, setShowTeamMembersModal] = useState(false);
+  const [selectedMembers, setSelectedMembers] = useState<TeamMemberInput[]>([]);
+  const [selectedSessionId, setSelectedSessionId] = useState<string>('');
+  const [selectedGameId, setSelectedGameId] = useState<string>('');
+
 
   useEffect(() => {
     fetchData();
@@ -135,6 +144,27 @@ export default function OrganisationDetailPage() {
     setShowResultsModal(true);
   };
 
+  const openTeamMembersModal = async (teamId: string, sessionId: string, gameId: string) => {
+    if (!teamId) {
+      setSelectedMembers([]);
+      setSelectedSessionId(sessionId);
+      setSelectedGameId(gameId);
+      setShowTeamMembersModal(true);
+      return;
+    }
+  
+    const teamMembersQuery = query(collection(db, 'TeamMembers'), where('teamId', '==', teamId));
+    const teamMembersSnap = await getDocs(teamMembersQuery);
+    const members = teamMembersSnap.docs.map(docSnap => ({ id: docSnap.id, ...docSnap.data() } as TeamMemberInput));
+  
+    setSelectedMembers(members);
+    setSelectedSessionId(sessionId);
+    setSelectedGameId(gameId);
+    setShowTeamMembersModal(true);
+  };
+  
+  
+
   if (loading || !organisation) return <div>Loading...</div>;
 
   return (
@@ -142,7 +172,7 @@ export default function OrganisationDetailPage() {
       <div className="flex justify-between items-center">
         <h1 className="text-2xl font-bold">{organisation.organisationName}</h1>
         <button
-          className="px-4 py-2 bg-blue-600 text-white rounded"
+          className="bg-orange-500 hover:bg-yellow-400 text-black font-bold px-4 py-2 rounded transition"
           onClick={() => {
             setRoundToEdit(null);
             setShowAddRoundModal(true);
@@ -168,7 +198,8 @@ export default function OrganisationDetailPage() {
               openSessionModal={() => openSessionModal(round)}
               openEditSessionModal={openEditSessionModal}
               handleEditRound={() => openEditRoundModal(round)}
-              handleShowResults={openResultsModal} // ✅ This links the 📊 icon to openResultsModal
+              handleShowResults={openResultsModal} 
+              openTeamMembersModal={openTeamMembersModal} 
             />
           ))}
         </div>
@@ -221,6 +252,16 @@ export default function OrganisationDetailPage() {
           }}
         />
       )}
+
+    {showTeamMembersModal && (
+      <TeamMembersModal
+        members={selectedMembers}
+        sessionId={selectedSessionId}
+        gameId={selectedGameId}
+        onClose={() => setShowTeamMembersModal(false)}
+      />
+    )}
+
     </div>
   );
 }

@@ -1,3 +1,6 @@
+// RoundCards.tsx
+// src/components/RoundCards.tsx
+
 'use client';
 
 import React from 'react';
@@ -9,29 +12,20 @@ export default function RoundCard({
   sessions,
   openSessionModal,
   openEditSessionModal,
-  handleShowResults, // ✅ Receives the openResultsModal function from parent
-  handleEditRound
+  handleShowResults,
+  handleEditRound,
+  openTeamMembersModal,
 }: RoundCardProps) {
-  // Debug: Show round ID and compare with session round IDs
-  console.log('%c[DEBUG] Current Round ID:', 'color: orange; font-weight: bold;', round.id);
-  sessions.forEach(session => {
-    console.log('%c[DEBUG] Session:', 'color: green;', {
-      sessionId: session.id,
-      roundId: session.roundId,
-      matches: session.roundId === round.id
-    });
-  });
-
   const filteredSessions = sessions.filter(s => s.roundId === round.id);
 
   return (
-    <div className="bg-white shadow p-4 rounded mt-4">
+    <div className="bg-white shadow p-4 rounded mt-4 border border-black">
       {/* Round Header */}
       <div className="flex justify-between items-center mb-2">
         <div>
           <h3 className="text-lg font-semibold text-gray-800">{round.name}</h3>
           <p className="text-sm text-gray-500">{round.startDate} – {round.endDate}</p>
-          <div className="mt-1 text-sm text-gray-600 space-y-1">
+          <div className="mt-1 text-sm text-gray-600 flex space-x-4 gap-2">
             <p>🎮 Game: {round.gameName || 'No Game Assigned'}</p>
             <p>📝 Pre-Quiz: {round.preQuizTitle || 'None'}</p>
             <p>📝 Post-Quiz: {round.postQuizTitle || 'None'}</p>
@@ -75,9 +69,22 @@ export default function RoundCard({
           >
             <div>
               <div className="font-semibold">📅 {session.date} at {session.startTime}</div>
-              <div>🏷️ Team: {session.teamName || 'Unnamed Team'}</div>
-              <div>👨‍💼 Facilitator: {session.facilitatorName || 'Not Assigned'}</div>
-              <div>👥 Members: {session.teamMembersCount}</div>
+              <div className='flex flex-wrap items-center gap-4 mt-1'> 
+                <div>🏷️ Team: {session.teamName || 'Unnamed Team'}</div>
+                <div>👨‍💼 Facilitator: {session.facilitatorName || 'Not Assigned'}</div>
+                <p 
+  className="text-blue-600 underline cursor-pointer"
+  onClick={() => openTeamMembersModal(session.teamId || '', session.id, round.gameId || '')}
+>
+  Members: {session.teamMembersCount}
+</p>
+                </div>
+
+              <div>
+
+
+              
+              </div>
             </div>
             <div className="flex gap-2">
               <button

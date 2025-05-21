@@ -1,6 +1,7 @@
-import { initializeApp } from 'firebase/app'
-import { getAuth } from 'firebase/auth'
-import { getFirestore } from 'firebase/firestore'
+import { initializeApp } from 'firebase/app';
+import { getAuth } from 'firebase/auth';
+import { getFirestore } from 'firebase/firestore';
+import { getFunctions } from 'firebase/functions'; 
 
 const firebaseConfig = {
   apiKey: "AIzaSyDD6coY49gQGo7rkhcPQY6nUhftziODTPY",
@@ -10,11 +11,11 @@ const firebaseConfig = {
   messagingSenderId: "917308365081",
   appId: "1:917308365081:web:1fb93c63b2b43ad9678d88",
   measurementId: "G-LQ50CD3219"
-}
+};
 
-const app = initializeApp(firebaseConfig)
-const auth = getAuth(app)
-const db = getFirestore(app)
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+const db = getFirestore(app);
+const functions = getFunctions(app, 'australia-southeast1'); 
 
-
-export { auth, db}
+export { auth, db, functions }; 

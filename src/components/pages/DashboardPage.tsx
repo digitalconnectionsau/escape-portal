@@ -1,3 +1,6 @@
+// DashboardPage.TSX
+// src/componets/pages/DashboardPage.tsx
+
 'use client'
 
 export default function DashboardPage() {

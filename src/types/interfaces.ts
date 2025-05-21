@@ -1,4 +1,6 @@
-//src/types/interfaces.ts
+// interfaces.ts
+// src/types/interfaces.ts
+
 
 export interface Session {
     id: string;
@@ -9,17 +11,19 @@ export interface Session {
     teamMembersCount: number;
     teamId?: string;
     roundId: string;
+    sessionLink?: string; 
+    timeZone?: string; 
     results?: {
-      durationMinutes: number;
-      durationSeconds: number;
-      engagementRating: number;
-      participationRating: number;
-      submittedAt: any;
+        durationMinutes: number;
+        durationSeconds: number;
+        engagementRating: number;
+        participationRating: number;
+        submittedAt: any;
     };
     teamMembers?: TeamMemberInput[];
-  }
-  
-  export interface Round {
+}
+
+export interface Round {
     id: string;
     name: string;
     startDate: string;
@@ -30,35 +34,42 @@ export interface Session {
     gameName?: string;
     preQuizTitle?: string;
     postQuizTitle?: string;
-  }
-  
-  export interface Organisation {
+    timezone?: string;
+
+}
+
+export interface Organisation {
     id: string;
     organisationName: string;
+    timeZone?: string; 
+    status?: 'active' | 'inactive'; 
+}
 
-  }
-  
-  export interface Game {
+export interface Game {
     id: string;
     name: string;
-  }
-  
-  export interface TeamMemberInput {
+    description?: string; 
+}
+
+export interface TeamMemberInput {
     id?: string;
     firstName: string;
     lastName?: string;
     email: string;
     mobile?: string;
     roundId?: string;
-  }
-  
-  export interface Quiz {
+    isLeader?: boolean;
+    attended?: boolean;
+    certified?: boolean;
+}
+
+export interface Quiz {
     id: string;
     title: string;
     type: 'Pre' | 'Post';
-  }
+}
 
-  export interface SessionModalProps {
+export interface SessionModalProps {
     show: boolean;
     onClose: () => void;
     onCompleted: () => void;
@@ -78,19 +89,20 @@ export interface Session {
     setStartTime: (value: string) => void;
     setFacilitatorName: (value: string) => void;
     setTeamName: (value: string) => void;
-  }
-  
-  export interface RoundCardProps {
+}
+
+export interface RoundCardProps {
     label: string;
     round: Round;
     sessions: Session[];
     openSessionModal: (round: Round) => void;
     openEditSessionModal: (session: Session) => void;
     handleShowResults: (sessionId: string) => void;
-    handleEditRound: (round: Round) => void; 
-  }
-  
-  export interface ParticipationRecord {
+    handleEditRound: (round: Round) => void;
+    openTeamMembersModal: (teamId: string, sessionId: string, gameId: string) => void;
+}
+
+export interface ParticipationRecord {
     roundId: string;
     sessionId: string;
     date: string;
@@ -99,9 +111,9 @@ export interface Session {
     certificationValidUntil?: string;
     preQuizCompleted: boolean;
     postQuizCompleted: boolean;
-  }
-  
-  export interface TeamMember {
+}
+
+export interface TeamMember {
     id: string;
     firstName: string;
     lastName?: string;
@@ -109,20 +121,13 @@ export interface Session {
     mobile?: string;
     currentSessionId?: string;
     participationHistory: ParticipationRecord[];
-  }
-
-  export interface TeamMemberInput {
-    id?: string;
-    firstName: string;
-    lastName?: string;
-    email: string;
-    mobile?: string;
-    roundId?: string;
-    isLeader?: boolean;
-    attended?: boolean;
-    certified?: boolean;
+    timeZone?: string; 
 }
-  
-  
-  
-  
+
+export interface AddRoundModalProps {
+  organisationId: string;
+  roundToEdit?: Round;
+  onClose: () => void;
+  onCompleted: () => void;
+}
+
